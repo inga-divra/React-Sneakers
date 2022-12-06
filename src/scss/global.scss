@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zen+Dots&display=swap');
-
 body {
     padding: 50px 25px 0;
     font-family: 'Inter', sans-serif;
+    font-size: 14px;
     font-weight: 400;
     color: $primary;
     background-color: $neutral;
@@ -19,8 +18,18 @@ body {
     max-width: 1200px;
     border-radius: 20px;
     background-color: $neutralLight;
-    box-shadow: 0 10px 20px rgba($primaryDarker, 0.04);
+    box-shadow: 0 10px 20px rgba($primary, 0.04);
     margin: 0 auto;
     height: 50vh;
-    padding: 0 25px;
+}
+
+.section {
+    padding: 45px 60px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    color: $primary;
+    text-transform: capitalize;
 }
