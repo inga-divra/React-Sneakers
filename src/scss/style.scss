@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zen+Dots&display=swap');
+@import 'reset';
+@import 'vars';
+@import 'global';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 43px 0 44px;
+  border-bottom: 1px solid $neutralLighter;
+
+  &__logo {
+    margin-right: 16px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-family: 'Zen Dots', cursive;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    color: $primaryLight;
+    text-transform: capitalize;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__right-item {
+    display: flex;
+  }
+
+  &__icon:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__price {
+    margin-right: 30px;
+  }
+}

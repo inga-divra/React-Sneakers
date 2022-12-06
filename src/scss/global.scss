@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zen+Dots&display=swap');
+
+body {
+    padding: 50px 25px 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: $primary;
+    background-color: $neutral;
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    border-radius: 20px;
+    background-color: $neutralLight;
+    box-shadow: 0 10px 20px rgba($primaryDarker, 0.04);
+    margin: 0 auto;
+    height: 50vh;
+    padding: 0 25px;
+}
