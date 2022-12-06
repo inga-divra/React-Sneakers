@@ -6,7 +6,7 @@ body {
     color: $primary;
     background-color: $neutral;
     line-height: 1.2;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -29,19 +29,33 @@ body {
 }
 
 .title {
+    position: relative;
     font-weight: 700;
     font-size: 32px;
     color: $primary;
     text-transform: capitalize;
     margin-bottom: 40px;
+    z-index: 2;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 35%;
+        bottom: 0;
+        width: 176px;
+        height: 14px;
+        transform: skew(-12deg) translateX(-50%);
+        background: rgba($accentBright, 0.5);
+        z-index: -1;
+    }
 }
 
-.underline {
+/* .underline {
     background-image: linear-gradient(90deg, #FE6D48, #FCB858);
     background-position: bottom;
     background-size: 100% 30%;
     background-repeat: no-repeat;
-}
+} */
 
 ::placeholder {
     color: $primaryLightest;
@@ -74,7 +88,7 @@ body {
 
 /* Scrollbar style */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 12px;
 }
 
@@ -82,7 +96,7 @@ body {
     background: rgb(61, 58, 58);
     background: radial-gradient(circle, rgba(61, 58, 58, 1) 0%, rgba(0, 0, 0, 0.9) 100%);
     border-radius: 100vw;
-    margin-block: 15px;
+    margin-block: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -90,4 +104,4 @@ body {
     background: linear-gradient(90deg, rgba(254, 109, 72, 1) 0%, rgba(252, 184, 88, 1) 100%);
     border: 2px solid $primary;
     border-radius: 100vw;
-}
+} */

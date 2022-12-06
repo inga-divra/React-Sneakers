@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <div className="overlay">
+        <div style={{ display: 'none' }} className="overlay">
           <div className="drawer">
             <div className="drawer__top">
               <h2 className="title drawer__title underline drawer__underline">
@@ -66,7 +66,7 @@ function App() {
 
           <div className="header__left">
             <a className="logo header__logo" href="#" >
-              <img className="logo__img" src="./img/logo.svg" alt="React Sneakers logo" width={40} height={40} />
+              <img className="logo__img" src="./img/icons/free1.svg" alt="React Sneakers logo" width={60} height={60} />
             </a>
             <div className="header__info">
               <p className="header__title">React Sneakers</p>
