@@ -6,6 +6,7 @@ body {
     color: $primary;
     background-color: $neutral;
     line-height: 1.2;
+    overflow: hidden;
 }
 
 .container {
@@ -20,7 +21,7 @@ body {
     background-color: $neutralLight;
     box-shadow: 0 10px 20px rgba($primary, 0.04);
     margin: 0 auto;
-    height: 100vh;
+
 }
 
 .section {
@@ -33,4 +34,60 @@ body {
     color: $primary;
     text-transform: capitalize;
     margin-bottom: 40px;
+}
+
+.underline {
+    background-image: linear-gradient(90deg, #FE6D48, #FCB858);
+    background-position: bottom;
+    background-size: 100% 30%;
+    background-repeat: no-repeat;
+}
+
+::placeholder {
+    color: $primaryLightest;
+}
+
+.price {
+    font-family: inherit;
+    color: inherit;
+    font-weight: 700;
+}
+
+.btn {
+    background-color: $accent;
+    color: $neutralLight;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    padding: 20px 30px;
+    border-radius: 18px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: lighten($accent, 7%);
+    }
+
+    &:active {
+        background-color: darken($accent, 10%);
+    }
+}
+
+/* Scrollbar style */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(61, 58, 58);
+    background: radial-gradient(circle, rgba(61, 58, 58, 1) 0%, rgba(0, 0, 0, 0.9) 100%);
+    border-radius: 100vw;
+    margin-block: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(254, 109, 72);
+    background: linear-gradient(90deg, rgba(254, 109, 72, 1) 0%, rgba(252, 184, 88, 1) 100%);
+    border: 2px solid $primary;
+    border-radius: 100vw;
 }
