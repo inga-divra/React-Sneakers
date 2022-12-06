@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 43px 0 44px;
-  border-bottom: 1px solid $neutralLighter;
+  border-bottom: 2px solid $neutralLighter;
   padding: 43px 25px;
 
   &__logo {
@@ -55,6 +55,12 @@
   border-radius: 40px;
   max-width: 220px;
   padding: 30px 30px 34px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
 
 
   &__img {
