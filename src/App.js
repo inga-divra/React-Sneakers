@@ -84,10 +84,27 @@ function App() {
           </ul>
         </header>
         <main>
+          <section className="hero">
+            <div className="container hero__container">
+              <div className="hero__content">
+                <div className="hero__content-left">
+                  <img className="hero__icon" src="./img/icons/adidas_icon.jpg" alt="adidas & disnay icons" />
+                  <div className="hero__content-text">
+                    <h1 className="hero__title">Stan Smith<span className="hero__title-comma">,</span> <span className="hero__subtitle">Forever!</span></h1>
+                    <button className="btn hero__btn">New collection</button>
+                  </div>
+
+                </div>
+                <div className="hero__content-right">
+                  <img className="hero__content-img" src="./img/banner.jpg" alt="stan smith sneakers" />
+                </div>
+              </div>
+            </div>
+          </section>
           <section className="main section">
             <div className="container">
               <div className="main__top">
-                <h1 className="title main__title underline">All sneakers</h1>
+                <h2 className="title main__title underline">All sneakers</h2>
                 <div className="main__top-search">
                   <img className="main__top-search-icon" src="./img/icons/search.svg" alt="search product icon" />
                   <input className="main__top-search-input" type="search" placeholder="Search"></input>

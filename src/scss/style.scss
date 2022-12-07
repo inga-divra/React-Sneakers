@@ -170,6 +170,7 @@
 
   &__right-item {
     display: flex;
+    align-items: center;
   }
 
   &__icon:not(:last-child) {
@@ -180,6 +181,56 @@
     margin-right: 30px;
   }
 }
+
+.hero {
+
+  padding: 45px 60px 0;
+
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    color: $accentSecond;
+    margin-bottom: 20px;
+  }
+
+  &__title-comma {
+    color: $primary;
+  }
+
+  &__subtitle {
+    display: block;
+    color: $primary;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    box-shadow: $shadowDark;
+  }
+
+  &__content {
+
+    background-color: $accentLighter;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  &__content-left {
+    background-color: $accentLighter;
+    padding: 16px 20px 0;
+    width: 40%;
+  }
+
+  &__content-text {
+    text-align: center;
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+  }
+}
+
 
 .main {
 
