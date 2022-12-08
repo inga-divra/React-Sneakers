@@ -2,6 +2,7 @@ import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Product from "./components/Product/Product.js";
+import { useState } from "react";
 
 const products = [
   {
@@ -66,15 +67,16 @@ const products = [
   }
 ]
 
-const arr = [1, 2, 3, 4, 5];
 
 
 function App() {
+  const [cartOpened, setCartOpened] = useState(false);
+
   return (
     <div className="App">
       <div className="wrapper">
-        <Drawer />
-        <Header />
+        {cartOpened && <Drawer onClose={() => setCartOpened(false)} />}
+        <Header onClickCart={() => setCartOpened(true)} />
         <main>
 
           <Hero />
@@ -94,7 +96,8 @@ function App() {
                     title={product.name}
                     price={product.price}
                     imgUrl={product.imgUrl}
-
+                    onFavorite={() => console.log('My fav')}
+                    onAdd={() => console.log('I want that product')}
                   />
                 })}
 
