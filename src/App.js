@@ -1,7 +1,73 @@
 import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Product from "./components/Product";
+import Product from "./components/Product/Product.js";
+
+const products = [
+  {
+    name: "Men's sneakers Nike Blazer Mid Suede",
+    price: 110.00,
+    imgUrl: "./img/sneakers/1.jpg"
+  },
+  {
+    name: "Men's sneakers Nike Air Max 270",
+    price: 160.00,
+    imgUrl: "./img/sneakers/2.jpg"
+  },
+  {
+    name: "Men's sneakers Nike Blazer Mid White",
+    price: 109.99,
+    imgUrl: "./img/sneakers/3.jpg"
+  },
+  {
+    name: "Women's sneakers Puma X Future Rider",
+    price: 64.95,
+    imgUrl: "./img/sneakers/4.jpg"
+  },
+  {
+    name: "Unisex Under Armour Curry 8",
+    price: 128.00,
+    imgUrl: "./img/sneakers/5.jpg"
+  },
+  {
+    name: "Men's sneakers Nike Kyrie 7",
+    price: 99.95,
+    imgUrl: "./img/sneakers/6.jpg"
+  },
+  {
+    name: "Men's sneakers Jordan Air Jordan 11",
+    price: 125.00,
+    imgUrl: "./img/sneakers/7.jpg"
+  },
+  {
+    name: "Men's sneakers Nike LeBron XVIII",
+    price: 139.00,
+    imgUrl: "./img/sneakers/8.jpg"
+  },
+  {
+    name: "Women's sneakers Nike Lebron XVIII Low",
+    price: 115.00,
+    imgUrl: "./img/sneakers/9.jpg"
+  },
+  {
+    name: "Men's sneakers Nike Blazer Mid Green",
+    price: 119.00,
+    imgUrl: "./img/sneakers/1.jpg"
+  },
+  {
+    name: "Women's sneakers Puma X Future Rider",
+    price: 60.95,
+    imgUrl: "./img/sneakers/4.jpg"
+  },
+  {
+    name: "Unisex Nike Kyrie Flytrap IV",
+    price: 129.00,
+    imgUrl: "./img/sneakers/10.jpg"
+  }
+]
+
+const arr = [1, 2, 3, 4, 5];
+
 
 function App() {
   return (
@@ -10,6 +76,7 @@ function App() {
         <Drawer />
         <Header />
         <main>
+
           <Hero />
           <section className="main section">
             <div className="container">
@@ -21,150 +88,16 @@ function App() {
                 </div>
               </div>
               <div className="product__wrapper">
-                <Product />
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/2.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Men's sneakers<span className="product__subtitle">Nike Air Max 270</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">160,00€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/3.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Men's sneakers<span className="product__subtitle">Nike Blazer Mid Suede</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">109,99€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/4.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Women's sneakers<span className="product__subtitle">Puma X Future Rider</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">64,95€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/5.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Unisex<span className="product__subtitle">Under Armour Curry 8</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">128,00€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/6.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Men's sneakers<span className="product__subtitle">Nike Kyrie 7</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">99,95€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/7.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Men's sneakers<span className="product__subtitle">Jordan Air Jordan 11</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">125,00€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/8.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Men's sneakers<span className="product__subtitle">Nike LeBron XVIII</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">139,00€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/9.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Women's sneakers<span className="product__subtitle">Nike Lebron XVIII Low</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">115,00€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/1.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Men's sneakers<span className="product__subtitle">Nike Blazer Mid Suede</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">110,00€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/4.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Women's sneakers<span className="product__subtitle">Puma X Future Rider</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">64,95€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
-                <div className="product">
-                  <img className="product__img" src="./img/sneakers/10.jpg" alt="green nike sneakers" width={133} height={112} />
-                  <h2 className="product__title">Unisex<span className="product__subtitle">Nike Kyrie Flytrap IV</span></h2>
-                  <div className="product__details">
-                    <div className="product__details-content">
-                      <h3 className="product__details-title">Price:</h3>
-                      <span className="price">129,00€</span>
-                    </div>
-                    <button className="product__btn" type="button">
-                      <img className="product__btn-img" src="./img/icons/add_btn.svg" alt="add to card button" width={32} height={32} />
-                    </button>
-                  </div>
-                </div>
+
+                {products.map((product) => {
+                  return <Product
+                    title={product.name}
+                    price={product.price}
+                    imgUrl={product.imgUrl}
+
+                  />
+                })}
+
               </div>
             </div>
           </section>

@@ -143,7 +143,8 @@
   padding: 43px 25px;
   border-radius: 20px;
   //box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-  box-shadow: rgba(33, 35, 38, 0.2) 0px 7px 7px -7px;
+  //box-shadow: rgba(33, 35, 38, 0.2) 0px 7px 7px -7px;
+  box-shadow: $shadowGlobal;
 
   &__title {
     font-weight: 700;
@@ -151,12 +152,14 @@
     text-transform: uppercase;
     font-family: 'Zen Dots', cursive;
     margin-bottom: 5px;
+
   }
 
   &__subtitle {
     color: rgba($primaryLight, 0.8);
     text-transform: capitalize;
     font-size: 16px;
+
   }
 
   &__left {
@@ -231,11 +234,17 @@
   }
 }
 
+.product__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
 
 .main {
 
   &__title {
     margin-bottom: 0;
+
   }
 
   &__top {
@@ -262,57 +271,4 @@
     outline: transparent;
     max-width: 200px;
   }
-}
-
-.product {
-  background-color: $neutralLight;
-  border: 2px solid $neutralLightest;
-  border-radius: 40px;
-  max-width: 220px;
-  padding: 30px 30px 34px;
-  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-
-  &:hover {
-    box-shadow: $shadow;
-    transform: translateY(-10px);
-  }
-
-  &__favorite {
-    position: absolute;
-    cursor: pointer;
-  }
-
-  &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-  }
-
-  &__img {
-    margin-bottom: 14px;
-  }
-
-  &__title {
-    font-size: 14px;
-    line-height: 17px;
-    font-size: inherit;
-    margin-bottom: 14px;
-  }
-
-  &__subtitle {
-    display: block;
-  }
-
-  &__details {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__details-title {
-    text-transform: uppercase;
-    color: $primaryLightest;
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
-
 }
